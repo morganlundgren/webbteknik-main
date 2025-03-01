@@ -1,0 +1,991 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*
+Gemensamt
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+	font-family: "Anonymous Pro", serif;
+	font-weight: 700;
+	
+}
+
+h1 a{
+	font-family: "Anonymous Pro", serif;
+	font-weight: 700;
+	
+
+}
+h2{
+	font-family: "Anonymous Pro", serif;
+}
+h3{
+	font-family: "Anonymous Pro", serif;
+}
+
+a{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*
+navbar
+*/
+
+nav {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background-color: white; 
+    z-index: 1000; 
+    padding: 10px 0;
+}
+.navcontrol {
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 15px; 
+    padding-right: 20px; 
+	font-size: small;
+}
+.navcontainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 20px;
+	
+}
+.logocontainer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-left: 10px;
+	gap: 10px;
+}
+.navcontrol a {
+    text-decoration: none; 
+    color: black; 
+    font-weight: bold;
+}
+.green{
+	color: #4ED521!important;
+}
+
+.menu-icon{
+	display: none;
+	font-size: 25px;
+    color: black;
+    cursor: pointer;
+	background-color: #7E8A78;
+	border-radius: 3px;
+}
+.navcontainer a{
+	text-decoration: none; 
+    color: black; 
+    font-weight: bold;
+}
+
+.arrow {
+    font-size: 12px;
+}
+
+
+/*
+footer
+*/
+
+.footer {
+    background-color: #7E8A78;
+    color: white; 
+    padding: 5px;	
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    max-width: 100%;
+    
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; 
+    margin: 10px;
+	
+}
+
+.footer-section h4 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+ul{
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+
+}
+
+li{
+	list-style: none;
+
+}
+
+
+
+/*
+samarbetspartners
+*/
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    margin: auto;
+    background-color: #ffffff;
+    padding-bottom: 60px; 
+}
+
+.carousel h1 {
+    
+    text-align: center;  
+    padding-bottom: 30px;  
+    z-index: 2;  
+	margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;      
+    gap: 50px; 
+	margin-top: 20px;
+	animation: marquee 20s linear infinite;
+}
+
+.carousel img {
+    width: 200px;
+	height: 100px;   
+}
+
+@keyframes marquee {
+	0% {transform: translateX(0);}
+	100% {transform: translateX(-50%);}
+}
+
+
+/*
+startsida
+*/
+
+
+.video-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh; 
+	z-index: -1;
+    
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.video-overlay {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Gör videon mörkare */
+}
+
+.video-text h1 {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); 
+    font-size: 2rem; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.video-text a{
+	position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); 
+    font-size: 1rem; 
+    font-weight: bold;
+    text-align: center;
+	margin-top: 30px;
+}
+
+.spacer {
+    height: 100vh; 
+    background-color: transparent; 
+}
+
+.golf-section {
+    padding: 40px 20px; /* Utrymme runt hela sektionen */
+    background-color: #ffffff; /* Ljus bakgrund */
+}
+
+.golf-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px; /* Avstånd mellan översta raden och highlight */
+}
+
+.golf-item {
+    text-align: center;
+    flex: 1;
+    margin: 0px; /* Avstånd mellan ikonerna */
+}
+
+.golf-icon {
+    width: 50px ;
+    height: 50px;
+	margin: 10px;
+     /* Avstånd mellan ikon och rubrik */
+}
+
+.golf-item h2 {
+	font-family: "Anonymous Pro", serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+	
+}
+
+.golf-item a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.golf-item a:hover {
+    text-decoration: underline;
+}
+
+.golf-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #748b6f; /* Grön bakgrund */
+    color: white; /* Vit text */
+    padding: 20px;
+    border-radius: 10px; /* Rundade hörn */
+}
+
+.golf-highlight-text {
+    flex: 1;
+    margin-right: 20px; /* Avstånd mellan text och bild */
+}
+
+.golf-highlight-text h2 {
+	font-family: "Anonymous Pro", serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.golf-highlight-text p {
+    margin-bottom: 10px;
+}
+
+.golf-button {
+    background-color: white;
+    color: #748b6f;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+	
+}
+
+.golf-button:hover {
+    background-color: #5c735b;
+    color: white;
+}
+
+.golf-highlight-image {
+    flex: 1;
+    max-width: 50%; 
+}
+
+.golf-highlight-image img {
+    width: 100%;
+    border-radius: 10px; 
+}
+
+/*
+Medlemskaps sida
+*/
+
+.Medlem-picture {
+    position: absolute;
+    height: 400px; 
+    width: 100%; 
+    overflow: hidden; 
+   
+}
+
+.Medlem-picture img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+	 filter: brightness(0.6);
+}
+
+
+.picture-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); 
+    font-size: 2rem; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.spacer {
+    height: 70vh; 
+    background-color: transparent; 
+}
+
+
+.membership-section {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 30px; 
+	padding: 40px;
+}
+
+.membership-text h2 {
+    margin-bottom: 5px;  
+}
+
+.membership-text a {
+    
+	margin-bottom: 20px;
+}
+
+
+.membership-right {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+		
+}
+
+.membership-picture img {
+    width: 100%; 
+    height: 50%; 
+	border-radius: 10px;
+}
+
+.membership-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #7E8A78;
+    max-width: 500px;
+	margin-top: 20px;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.membership-form .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.membership-form .form-row div {
+    flex: 1;
+}
+
+.membership-form h3 {
+    background-color: #7E8A78;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    margin: -20px -20px 20px -20px;
+    text-align: center;
+}
+
+.membership-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.membership-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #748b6f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.membership-form button:hover {
+    background-color: #92a98c;
+}
+
+/*
+historia
+*/
+
+.historia-picture {
+    position: absolute;
+    height: 400px; 
+    width: 100%; 
+    overflow: hidden;  
+}
+
+.historia-picture img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+	filter: brightness(0.6);
+	margin-bottom: 10px;
+}
+
+.timeline {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+    position: relative;
+	margin-top: 60vh;
+}
+
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-event {
+    position: relative;
+    padding: 20px;
+    width: 50%;
+}
+
+
+.timeline-event:nth-child(odd) {
+    text-align: right;
+    left: 0;
+}
+
+.timeline-event:nth-child(even) {
+    text-align: left;
+    left: 50%;
+}
+
+
+.timeline-event::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color:rgba(0, 128, 0, 100);
+    border-radius: 50%;
+    border: 4px solid white;
+	
+}
+
+/* Justera punkterna */
+.timeline-event:nth-child(odd):before {
+    right: -15px;
+}
+
+.timeline-event:nth-child(even):before {
+    left: -14px;
+}
+
+/* Linjen i mitten */
+.timeline-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color:black;
+    transform: translateX(-50%);
+}
+
+/* Stil för innehåll */
+.timeline-content {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/*
+Konakta oss
+*/
+.kontakt-picture {
+    position: absolute;
+    height: 400px; 
+    width: 100%; 
+    overflow: hidden; 
+   margin-bottom: 10px;
+}
+
+.kontakt-picture img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+	filter: brightness(0.8);
+	
+}
+
+.kontakt-spacer{
+	height: 60vh;
+}
+
+.kontakt-container {
+	display: grid;
+	grid-template-columns: 4fr 4fr; 
+	grid-template-rows: 4fr 4fr; 
+	gap: 25px; 
+	width: 100%;
+	 
+	padding: 40px;
+}
+
+.box {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box h2, .box a{
+	margin-bottom: 5px;
+}
+
+/*
+Starttid
+*/
+
+.starttid-picture {
+    position: absolute;
+    height: 400px; 
+    width: 100%; 
+    overflow: hidden; 
+   
+}
+
+.starttid-picture img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+	filter: brightness(0.6);
+}
+
+.starttid-spacer{
+	height: 60vh;
+}
+
+.calendar-section {
+  	display: flex; 
+	margin-top: 10px;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	background-color: #ffffff;
+	padding-right: 30px;
+}
+
+.bokning-inf h2{
+	margin-top: 10px;
+}
+
+.bokning-inf {
+	padding-left: 20px;
+
+}
+
+.container {
+    max-width: 50%;
+    margin: 20px;
+}
+
+input[type="date"] {
+    font-size: 18px;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.times {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.time-slot {
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    background-color: #7E8A78;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+	color: white;
+	margin-bottom: 5px;
+}
+
+.container h3{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.container h2{
+	margin-bottom: 10px;
+}
+
+.time-slot:hover {
+    opacity: 0.6;;
+    color: white;
+	
+}
+
+/*
+tävling
+*/
+
+.tävling-picture {
+    position: absolute;
+    height: 400px; 
+    width: 100%; 
+    overflow: hidden;   
+}
+
+.tävling-text h1{
+	margin-bottom: 20px;
+}
+
+.tävling-picture img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+	filter: brightness(0.6);
+}
+.tävling-spacer{
+	height: 60vh;
+
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+	padding-left: 20px;  
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    margin-bottom: 40px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #7E8A78;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button {
+    background-color: #7E8A78;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #92a98c;
+}
+
+/* RESPONSIV DESIGN */
+@media screen and (max-width: 500px) {
+    .table-container {
+        overflow-x: auto; 
+        display: block;
+        padding: 0 10px;
+    }
+
+    table {
+        min-width: 450px; /* Förhindrar att tabellen kläms ihop */
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px; /* Gör texten lite mindre på små skärmar */
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+/*
+resposnivitet
+*/
+@media screen and (max-width: 500px) {
+
+	/*
+	navbar
+	*/
+    .navtext {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .navtext.show { 
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+
+	.membership-picture{
+		display: none;
+	}
+
+	/*
+	video startsida
+	*/
+	.video-text a{
+		font-size: 0.5rem;
+	}
+
+	.video-text h1{
+		font-size: 1rem;
+	}
+
+	.video-container{
+		height: 50vh
+	}
+
+	.spacer{
+		height: 50vh;
+	}
+
+	/*
+	golf-container
+	*/
+	.golf-item {
+		text-align: center;
+		flex: 1;
+		margin: 0px; /* Avstånd mellan ikonerna */
+	}
+	
+	.golf-icon {
+		width: 20px ;
+		height: 20px;
+		margin: 3px;
+		 
+	}
+	
+	.golf-item h2 {
+		font-family: "Anonymous Pro", serif;
+		font-size: 15px;
+		margin-bottom: 15px;
+		
+	}
+
+	.golf-item a {
+		color: black;
+		text-decoration: none;
+		font-size: 10px;
+	}
+
+	/*
+	carousel-
+	*/
+	.carousel-container{
+		padding: 30px;
+		text-align: center;
+	}
+	.carousel-container h1 {
+    
+		text-align: center;  
+		padding-bottom:  15px;  
+		z-index: 2;  
+		font-size: 20px;
+	}
+	
+	.carousel {
+		display: flex;      
+		gap: 50px; 
+		margin-top: 20px;
+		animation: marquee 15s linear infinite;
+	}
+	
+	.carousel img {
+		width: 70px;
+		height: 50px;   
+	}
+
+	/*
+	startid-sida
+	*/
+	.calendar-section{
+		flex-direction: column;
+	}
+
+	.starttid-spacer{
+		height: 50vh;
+	}
+
+	/*
+	kontakt-sida
+	*/
+
+	.kontakt-container{
+		grid-template-columns:repeat(1, 1fr);
+
+	}
+	.kontakt-spacer{
+		height: 50vh;
+	}
+
+	/*
+	Tävlings-kalender sida
+	*/
+	.picture-text h1{
+		font-size: 2rem;
+	}
+
+	.tävling-spacer{
+		height: 50vh;
+		
+	}
+
+	.table-container {
+        overflow-x: auto; 
+        display: block;
+        padding: 0 10px;
+    }
+
+    table {
+        min-width: 450px; 
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+	} 
+
+    button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Anpassningar för utskrift */
+@media print {
+    body {
+
+        font-size: 12pt;
+        color: black;
+        background: white;
+        margin: 0;
+        padding: 2cm;
+    }
+
+	*{
+		-webkit-print-color-adjust:exact;
+		print-color-adjust:exact;
+	}
+
+    /* Dölj element som inte behövs vid utskrift */
+    nav, footer, .carousel-container{
+        display: none;
+    }
+
+    /* Justera innehållet */
+    .container, .bokning-inf {
+        width: 100%;
+		height: 200px;
+        margin: 0 auto;
+        page-break-before: auto;
+    }
+	
+}

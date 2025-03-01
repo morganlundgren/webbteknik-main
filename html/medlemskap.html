@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/assets.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="navcontrol">
+			<a href="../html/starttid.html" class= "green">Boka Starttid </a>
+			<a href="../html/kontakt.html">Kontakta oss</a>
+			<a href="">Sök</a>
+        </div>
+        <div class="navcontainer">
+            <div class="logocontainer"><img height="70" width="70" src="../assets/img/rundlogga.png" alt="bild på logga">
+                <h1>
+                    <a href="../html/index.html">Porjus Golfklubb</a>
+                </h1>
+            </div>
+			<div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="navtext">
+                <a href="">Klubben <span class="arrow">▼</span></a>
+                <a href="">Gäster <span class="arrow">▼</span></a>
+                <a href="../html/medlemskap.html">Medlemskap <span class="arrow">▼</span></a>
+                <a href="../html/historia.html">Historia <span class="arrow">▼</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="Medlem-picture">
+        <img src="../assets/img/pexels-jopwell-1325681.jpg" alt="Medlemskap">
+        <div class="picture-text">
+            <h1>Medlemskap</h1>
+        </div>
+    </section>
+
+    <div class="spacer"></div>
+
+    <section class="membership-section">
+        
+        <div class="membership-content">
+            <div class="membership-text">
+                <h2>Bli medlem hos oss!</h2>
+                <a>
+                    Välkommen till en av norra Sveriges häftigaste golfklubbar som ligger i anslutning till Porjus
+                    kraftstation. Golfbanan ligger mitt inne i kraftstationsområdet med dammar, intag, utskov och
+                    ställverk i omedelbar anslutning till utslag och greener.
+				</a>
+            </div>
+
+            
+            <div class="membership-form">
+                <h3>Medlem</h3>
+                <form>
+                    <label>Jag vill registrera</label>
+                    <input type="radio" name="age" value="adult"> Vuxen (18 år eller äldre)<br>
+                    <input type="radio" name="age" value="youth"> Underårig (17 år eller yngre)<br><br>
+
+                    <label>Har du Golf-ID?</label>
+                    <input type="radio" name="golfid" value="yes"> Ja<br>
+                    <input type="radio" name="golfid" value="no"> Nej<br><br>
+
+                    <label>Personnummer</label>
+                    <input type="text" name="personnummer" placeholder="ÅÅÅÅMMDD-XXXX"><br>
+
+                    <div class="form-row">
+                        <div>
+                            <label>Förnamn</label>
+                            <input type="text" name="firstname" placeholder="Förnamn">
+                        </div>
+                        <div>
+                            <label>Efternamn</label>
+                            <input type="text" name="lastname" placeholder="Efternamn">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label>Gatuadress</label>
+                            <input type="text" name="address" placeholder="Gatuadress">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label>Postnummer</label>
+                            <input type="text" name="postcode" placeholder="Postnummer">
+                        </div>
+                        <div>
+                            <label>Postort</label>
+                            <input type="text" name="city" placeholder="Postort">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label>Telefon</label>
+                            <input type="text" name="phone" placeholder="Telefon">
+                        </div>
+                        <div>
+                            <label>E-post</label>
+                            <input type="email" name="email" placeholder="E-post">
+                        </div>
+                    </div>
+
+                    <button type="submit">Skicka</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Högerkolumn: Bilder -->
+        <div class="membership-picture">
+            <img src="../assets/img/Porjus-GK-4.jpg" alt="Golfbana">
+            <img src="../assets/img/cropped-Green-8-.png" alt="Kraftstation">
+        </div>
+    </section>
+
+	<div class="carousel-container">
+		<h1>Våra samarbetspartners</h1>
+
+		<div class="carousel">
+			<img src="../assets/img/Med_stod_fran_Allmanna_Arvsfonden_farg_positiv-624x151.png" alt="logga på företag">
+			<img src="../assets/img/nedladdning(1).jpg" alt="logga på företag">
+			<img src="../assets/img/nedladdning.jpg" alt="logga på företag">
+			<img src="../assets/img/nedladdning.png" alt="logga på företag">
+			<img src="../assets/img/teamsportia.png" alt="logga på företag">
+
+			<img src="../assets/img/Med_stod_fran_Allmanna_Arvsfonden_farg_positiv-624x151.png" alt="logga på företag">
+			<img src="../assets/img/nedladdning(1).jpg" alt="logga på företag">
+			<img src="../assets/img/nedladdning.jpg" alt="logga på företag">
+			<img src="../assets/img/nedladdning.png" alt="logga på företag">
+			<img src="../assets/img/teamsportia.png" alt="logga på företag">
+
+			<img src="../assets/img/Med_stod_fran_Allmanna_Arvsfonden_farg_positiv-624x151.png" alt="logga på företag">
+			<img src="../assets/img/nedladdning(1).jpg" alt="logga på företag">
+			<img src="../assets/img/nedladdning.jpg" alt="logga på företag">
+			<img src="../assets/img/nedladdning.png" alt="logga på företag">
+			<img src="../assets/img/teamsportia.png" alt="logga på företag">
+
+		</div>
+	
+	</div>
+
+ 
+    <footer class="footer">
+		<div class="footer-container">
+			<!-- Sektion 1: Logga -->
+			<div class="footer-section">
+				<img height="100" width="100" src="../assets/img/rundlogga.png " alt="bild på logga ">
+			</div>
+
+			<!-- Sektion 2: Kontaktinformation -->
+			<div class="footer-section">
+				<h4>Kontaktinformation</h4>
+				<ul>
+					<li>Porjus Golfklubb</li>
+					<li>Hantverkargatan 39 C</li>
+					<li>962 33 Jokkmokk</li>
+					<li>070-395 44 05</li>
+					<li><a href="mailto:info@porjusgk.com">info@porjusgk.com</a></i>
+				</ul>
+			</div>
+
+			<!-- Sektion 3: Spela -->
+			<div class="footer-section">
+				<h4>Spela</h4>
+				<ul>
+					<li><a href="#">Boka starttid</a></li>
+					<li><a href="#">Banguide</a></li>
+					<li><a href="#">Trivselregler</a></li>
+				</ul>
+			</div>
+
+			<!-- Sektion 4: Medlemskap -->
+			<div class="footer-section">
+				<h4>Medlemskap</h4>
+				<ul>
+					<li><a href="#">Börja spela golf</a></li>
+					<li><a href="../html/medlemskap.html">Bli medlem</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
