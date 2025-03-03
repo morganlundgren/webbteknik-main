@@ -53,6 +53,7 @@ nav {
     background-color: white; 
     z-index: 1000; 
     padding: 10px 0;
+	transition: height 0.3s ease-in-out;
 }
 .navcontrol {
     display: flex; 
@@ -103,6 +104,28 @@ nav {
     font-size: 12px;
 }
 
+.mobile-menu{
+	display:none;
+	height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    background: white;
+    width: 100%;
+	padding: 20px;
+	
+}
+
+.mobile-menu a {
+	text-decoration: none; 
+    color: black; 
+    font-size: 16px;
+	margin-bottom: 10px;
+	
+}
+
+.content {
+    transition: margin-top 0.3s ease-in-out;
+}
 
 /*
 footer
@@ -850,6 +873,10 @@ resposnivitet
 	/*
 	golf-container
 	*/
+	.golf-container{
+		display: flex;
+		flex-direction: column;
+	}
 	.golf-item {
 		text-align: center;
 		flex: 1;
@@ -857,9 +884,9 @@ resposnivitet
 	}
 	
 	.golf-icon {
-		width: 20px ;
-		height: 20px;
-		margin: 3px;
+		width: 50px ;
+		height: 50px;
+		margin: 10px;
 		 
 	}
 	
@@ -957,35 +984,16 @@ resposnivitet
         padding: 6px 10px;
         font-size: 12px;
     }
-}
 
-/* Anpassningar för utskrift */
-@media print {
-    body {
-
-        font-size: 12pt;
-        color: black;
-        background: white;
-        margin: 0;
-        padding: 2cm;
-    }
-
-	*{
-		-webkit-print-color-adjust:exact;
-		print-color-adjust:exact;
+	.mobile-menu.active{
+		display: flex;
+		flex-direction: column;
+		height: 150px;
 	}
 
-    /* Dölj element som inte behövs vid utskrift */
-    nav, footer, .carousel-container{
-        display: none;
-    }
-
-    /* Justera innehållet */
-    .container, .bokning-inf {
-        width: 100%;
-		height: 200px;
-        margin: 0 auto;
-        page-break-before: auto;
-    }
+	
 	
 }
+
+
+
