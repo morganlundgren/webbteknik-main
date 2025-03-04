@@ -108,7 +108,7 @@ nav {
 	display:none;
 	height: 0;
     overflow: hidden;
-    transition: height 0.3s ease-in-out;
+    transition: height 0.5s ease-in-out;
     background: white;
     width: 100%;
 	padding: 20px;
@@ -116,10 +116,14 @@ nav {
 }
 
 .mobile-menu a {
-	text-decoration: none; 
-    color: black; 
+	display: flex;
+    justify-content: space-between; 
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #ddd; 
     font-size: 16px;
-	margin-bottom: 10px;
+    
 	
 }
 
@@ -988,7 +992,7 @@ resposnivitet
 	.mobile-menu.active{
 		display: flex;
 		flex-direction: column;
-		height: 150px;
+		height: auto;
 	}
 
 	
