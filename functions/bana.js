@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const image = document.querySelector(".banprofil img"); // Hämtar bilden i div.banprofil
+    const image = document.querySelector(".banprofil img"); 
     const lightbox = document.createElement("div");
-    lightbox.id = "lightbox";
     document.body.appendChild(lightbox);
 
     Object.assign(lightbox.style, {
@@ -35,3 +34,35 @@ document.addEventListener("DOMContentLoaded", function () {
         lightbox.style.display = "none";
     });
 });
+
+$(document).ready(function () {
+    $("#draggable").draggable();
+
+    $("#dropzone").droppable({
+        accept: "#draggable", // Endast golfbollen kan droppas
+        tolerance: "fit", // Bollen måste vara helt inom hålet
+        drop: function (event, ui) {
+            // Animera bollen så att den sjunker ner i hålet
+            ui.draggable.animate({
+                top: $(this).position().top + 10, 
+                left: $(this).position().left + 10,
+                width: "10px", 
+                height: "10px",
+                opacity: 0
+            }, 500, function () {
+                // Återställ bollen efter en stund
+                setTimeout(() => {
+                    ui.draggable.css({
+                        top: "68%", // Ursprunglig position
+                        left: "45%",
+                        width: "40px",
+                        height: "40px",
+                        opacity: 0
+                    });
+                }, 1000);
+            });
+        }
+    });
+});
+
+
