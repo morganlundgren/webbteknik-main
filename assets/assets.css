@@ -134,10 +134,14 @@ nav {
 /*
 footer
 */
+.footer-ban{
+	background-color: white;
+	padding: 5px;
+	height: auto;
+}
 
 .footer {
-    background-color: #7E8A78;
-    color: white; 
+    background-color: #80AB82;
     padding: 5px;	
 
 }
@@ -162,6 +166,7 @@ footer
     margin-bottom: 10px;
     font-size: 16px;
     text-transform: uppercase;
+	color: black;
 }
 
 .footer-section p {
@@ -169,7 +174,7 @@ footer
 }
 
 .footer-section a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -181,6 +186,7 @@ ul{
 	justify-content: center;
 	padding: 0;
 	margin: 0;
+	color: black;
 
 }
 
@@ -290,7 +296,7 @@ startsida
 
 .golf-section {
     padding: 40px 20px; /* Utrymme runt hela sektionen */
-    background-color: #ffffff; /* Ljus bakgrund */
+    background-color: white; /* Ljus bakgrund */
 }
 
 .golf-container {
@@ -333,7 +339,7 @@ startsida
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #748b6f; /* Grön bakgrund */
+    background-color: #80AB82; /* Grön bakgrund */
     color: white; /* Vit text */
     padding: 20px;
     border-radius: 10px; /* Rundade hörn */
@@ -356,7 +362,7 @@ startsida
 
 .golf-button {
     background-color: white;
-    color: #748b6f;
+    color: #7E8A78;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -800,6 +806,27 @@ button {
 
 button:hover {
     background-color: #92a98c;
+}
+
+
+/*
+Banguide
+*/
+
+
+.ban-spacer{
+	margin-top: 20vh;
+}
+.banprofil h1{
+	margin-bottom: 20px;
+}
+.banprofil{
+	padding: 20px;
+	background-color: #80AB82;
+	
+}
+#bana{
+	border-radius: 10px;
 }
 
 /* RESPONSIV DESIGN */

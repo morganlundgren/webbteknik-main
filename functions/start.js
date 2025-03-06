@@ -7,7 +7,7 @@ function toggleMenu() {
         content.style.marginTop = "0"; // Återställ
     } else {
         menu.classList.add("active");
-        content.style.marginTop = "250px"; // Justera efter menyns höjd
+        content.style.marginTop = "auto"; // Justera efter menyns höjd
     }
 }
 
@@ -32,3 +32,5 @@ document.getElementById("datePicker").addEventListener("change", function() {
         }
     }
 });
+
+
