@@ -57,12 +57,54 @@ $(document).ready(function () {
                         left: "45%",
                         width: "40px",
                         height: "40px",
-                        opacity: 0
+                        opacity: 1
                     });
-                }, 1000);
+                }, 500);
             });
         }
     });
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    let golfClub = document.createElement("div");
+    golfClub.id = "golfclub";
+    document.body.appendChild(golfClub);
+
+    let golfBall = document.getElementById("draggable");
+    let dropzone = document.getElementById("dropzone");
+
+    // Uppdatera golfklubbans position så den följer musen
+    document.addEventListener("mousemove", (event) => {
+        golfClub.style.left = `${event.pageX - 25}px`;
+        golfClub.style.top = `${event.pageY - 50}px`;
+    });
+
+    // När man klickar kollar vi om klubban träffar bollen
+    document.addEventListener("click", () => {
+        let clubRect = golfClub.getBoundingClientRect();
+        let ballRect = golfBall.getBoundingClientRect();
+
+        if (
+            clubRect.right > ballRect.left &&
+            clubRect.left < ballRect.right &&
+            clubRect.bottom > ballRect.top &&
+            clubRect.top < ballRect.bottom
+        ) {
+            // Få hålets position
+            let holeRect = dropzone.getBoundingClientRect();
+            let holeX = holeRect.left + holeRect.width / 2;
+            let holeY = holeRect.top + holeRect.height / 2;
+
+            // Animera bollen mot hålet
+            golfBall.style.transition = "top 1s ease-out, left 1s ease-out";
+            golfBall.style.left = `${holeX - 20}px`; // Justera för bollens storlek
+            golfBall.style.top = `${holeY - 20}px`;
+
+            // När bollen når hålet, låt den försvinna
+            setTimeout(() => {
+                golfBall.style.opacity = 0;
+            }, 1000);
+        }
+    });
+});

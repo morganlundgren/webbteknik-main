@@ -12,6 +12,7 @@ Gemensamt
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+
 }
 
 img, video, iframe {
@@ -41,6 +42,21 @@ h3{
 a{
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-decoration: none;
+}
+
+#golfclub {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url('../assets/img/golfklubba.png') no-repeat center;
+    background-size: contain;
+    pointer-events: none; /* Så att den inte blockerar klick */
+    transform: rotate(-45deg);
+    z-index: 1000;
+}
+
+body#banguide{
+	cursor: none;
 }
 
 /*
@@ -470,6 +486,7 @@ Medlemskaps sida
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+	color: black;
 }
 
 .membership-form .form-row {
@@ -784,7 +801,7 @@ th, td {
 }
 
 th {
-    background-color: #7E8A78;
+    background-color: #80AB82;
     color: white;
 }
 
@@ -793,7 +810,7 @@ tr:nth-child(even) {
 }
 
 button {
-    background-color: #7E8A78;
+    background-color: #80AB82;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -803,7 +820,7 @@ button {
 }
 
 button:hover {
-    background-color: #92a98c;
+    background-color: #3f493d;
 }
 
 
@@ -1053,6 +1070,5 @@ resposnivitet
 	
 	
 }
-
 
 

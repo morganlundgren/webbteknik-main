@@ -1,16 +1,17 @@
 
 function toggleMenu() {
-    const menu = document.querySelector(".mobile-menu");
-    const content = document.querySelector(".content");
+    const $menu = $(".mobile-menu");
+    const $content = $(".content");
 
-    if (menu.classList.contains("active")) {
-        menu.classList.remove("active");
-        content.style.marginTop = "0"; // Återställ
+    if ($menu.hasClass("active")) {
+        $menu.removeClass("active");
+        $content.css("margin-top", "0"); // Återställ
     } else {
-        menu.classList.add("active");
-        content.style.marginTop = "250px"; // Justera efter menyns höjd
+        $menu.addClass("active");
+        $content.css("margin-top", "250px"); // Justera efter menyns höjd
     }
 }
+
 
 $(document).ready(function() {
     // Välj alla länkar och lägg till hover-effekten
@@ -25,4 +26,6 @@ $(document).ready(function() {
         $(this).css("transform", "scale(1)");
     });
 });
+
+
 
