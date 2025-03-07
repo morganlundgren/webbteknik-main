@@ -1,16 +1,33 @@
+document.querySelector(".menu-icon").addEventListener("click", function() {
+    let $menu = $('.mobile-menu');
+	const $content = $('.content');
 
-function toggleMenu() {
-    const $menu = $(".mobile-menu");
-    const $content = $(".content");
+    if ($menu.hasClass('active')) {
+		
+        // Använd animate för att stänga menyn
+        $menu.animate({top: "-30%"}, 500, function() {
+            // När animationen är klar, ta bort 'active'
+            $menu.removeClass('active');
+		
+			
+        });
+		$content.animate({marginTop:"0"}, 500)
 
-    if ($menu.hasClass("active")) {
-        $menu.removeClass("active");
-        $content.css("margin-top", "0"); // Återställ
     } else {
-        $menu.addClass("active");
-        $content.css("margin-top", "250px"); // Justera efter menyns höjd
+		 
+        // Lägg till 'active' och animerar från top: -100% till 0
+        $menu.addClass("active").css("top", "-30%").animate({top: "12%"}, 500);
+		$content.animate({marginTop:"250px"}, 500)
+		
+
     }
-}
+});
+
+
+
+
+
+
 
 
 $(document).ready(function() {

@@ -70,7 +70,6 @@ nav {
     background-color: white; 
     z-index: 1000; 
     padding: 10px 0;
-	transition: height 0.3s ease-in-out;
 }
 .navcontrol {
     display: flex; 
@@ -78,6 +77,8 @@ nav {
     gap: 15px; 
     padding-right: 20px; 
 	font-size: small;
+	z-index: 500;
+	
 }
 .navcontainer {
 	display: flex;
@@ -85,6 +86,8 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	padding-right: 20px;
+	z-index:500;
+	
 	
 }
 .logocontainer {
@@ -120,30 +123,45 @@ nav {
     font-size: 12px;
 }
 
-.mobile-menu{
-	display:none;
-	height: 0;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
+/* Stil för mobilmenyn */
+.mobile-menu {
     background: white;
     width: 100%;
-	padding: 20px;
-	
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	display: none;
+
 }
 
+/* Visa menyn när den är aktiv */
+.mobile-menu.active {
+	display: block;
+}
+
+/* Menyalternativ */
 .mobile-menu a {
-	display: flex;
-    justify-content: space-between; 
+    display: flex;  /* Gör så att text och pil ligger på samma rad */
+    justify-content: space-between; /* Text till vänster, pil till höger */
+    align-items: center;
     padding: 15px;
     text-decoration: none;
     color: black;
-    border-bottom: 1px solid #ddd; 
-    font-size: 16px;	
+    border-bottom: 1px solid #ddd; /* Linje under varje länk */
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.content {
-    transition: margin-top 0.3s ease-in-out;
+/* Pilarna */
+.mobile-menu .arrow {
+    font-size: 14px;
+    color: black;
 }
+
+/* Se till att sista länken inte har en extra linje */
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+
 
 /*
 footer
@@ -922,6 +940,25 @@ resposnivitet
     .menu-icon {
         display: block; 
     }
+	.navcontainer {
+		position: relative;
+	}
+	.navcontrol{
+		position: relative;
+	}
+
+	.mobile-menu{
+	
+		background: white;
+		width: 100%;
+		display: none;
+		top: -100%;
+		position: fixed;
+		z-index: 200;
+
+	}
+
+	
 
 	.membership-picture{
 		display: none;
@@ -1059,16 +1096,7 @@ resposnivitet
     button {
         padding: 6px 10px;
         font-size: 12px;
-    }
-
-	.mobile-menu.active{
-		display: flex;
-		flex-direction: column;
-		height: auto;
-	}
-
-	
-	
+    }	
 }
 
 
