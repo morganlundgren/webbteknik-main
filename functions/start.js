@@ -41,11 +41,11 @@ document.querySelector(".menu-icon").addEventListener("click", function() {
 
 document.getElementById("datePicker").addEventListener("change", function() {
     const timesContainer = document.getElementById("timesContainer");
-    timesContainer.innerHTML = ""; // Rensa tider från tidigare val
+    timesContainer.innerHTML = ""; 
 
-    const startHour = 6;  // Starttid (09:00)
-    const endHour = 20;   // Sluttid (17:00)
-    const interval = 15;  // 15 minuters intervaller
+    const startHour = 6;  
+    const endHour = 20;   
+    const interval = 15;  
 
     for (let hour = startHour; hour < endHour; hour++) {
         for (let minutes = 0; minutes < 60; minutes += interval) {

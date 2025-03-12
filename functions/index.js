@@ -23,26 +23,17 @@ document.querySelector(".menu-icon").addEventListener("click", function() {
     }
 });
 
-
-
-
-
-
-
-
-$(document).ready(function() {
-    // Välj alla länkar och lägg till hover-effekten
-    $("a").on("mouseover", function() {
-        $(this).css({
-            "transform": "scale(1.2)",
-            "transition": "transform 0.2s ease-in-out"
-        });
-    });
-
-    $("a").on("mouseout", function() {
-        $(this).css("transform", "scale(1)");
+$(document).on("mouseover", "a", function() {
+    $(this).css({
+        "transform": "scale(1.2)",
+        "transition": "transform 0.2s ease-in-out"
     });
 });
+
+$(document).on("mouseout", "a", function() {
+    $(this).css("transform", "scale(1)");
+});
+
 
 
 

@@ -89,6 +89,7 @@ nav {
 	z-index:500;
 	
 	
+	
 }
 .logocontainer {
 	display: flex;
@@ -100,6 +101,7 @@ nav {
 .navcontrol a {
     color: black; 
     font-weight: bold;
+
 }
 .green{
 	color: #4ED521!important;
@@ -117,6 +119,8 @@ nav {
 	text-decoration: none; 
     color: black; 
     font-weight: bold;
+	display: inline-block;
+
 }
 
 .arrow {
@@ -208,6 +212,7 @@ footer
 .footer-section a {
     color: black;
     text-decoration: none;
+	display: inline-block;
 }
 
 .footer-section a:hover {
