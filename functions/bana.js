@@ -63,11 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
+	// Gör Golfbollen flyttbar 
     $("#draggable").draggable();
 
     $("#dropzone").droppable({
-        accept: "#draggable", // Endast golfbollen kan droppas
-        tolerance: "fit", // Bollen måste vara helt inom hålet
+        accept: "#draggable",
+        tolerance: "fit", 
         drop: function (event, ui) {
             // Animera bollen så att den sjunker ner i hålet
             ui.draggable.animate({
@@ -80,7 +81,7 @@ $(document).ready(function () {
                 // Återställ bollen efter en stund
                 setTimeout(() => {
                     ui.draggable.css({
-                        top: "68%", // Ursprunglig position
+                        top: "68%", 
                         left: "45%",
                         width: "40px",
                         height: "40px",
